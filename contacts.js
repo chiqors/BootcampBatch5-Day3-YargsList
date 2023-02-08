@@ -44,7 +44,7 @@ function listContact() {
     const file = fs.readFileSync(dataPath, 'utf-8');
     const contacts = JSON.parse(file);
     console.log('Contact list:');
-    let i = (true) ? 1 : 0;
+    let i = 1;
     contacts.forEach((contact) => {
         console.log(`${i}. ${contact.name} - ${(contact.email) ? contact.email+' - ' : ''}${contact.phone}`);
         i++;
